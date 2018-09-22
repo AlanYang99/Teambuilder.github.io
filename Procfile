@@ -1,1 +1,1 @@
-web: python chatup.py
+web: gunicorn --worker-class socketio.sgunicorn.GeventSocketIOWorker --log-file=- chatup:app
